@@ -22,6 +22,7 @@ module.exports = (app) => {
   app.set("trust proxy", 1);
   console.log('FRONTEND_URL: ', FRONTEND_URL);
   // controls a very specific header to pass headers from the frontend
+  console.log('ORIGIN: ', process.env.ORIGIN)
   app.use(
     cors({
       origin: [FRONTEND_URL]
